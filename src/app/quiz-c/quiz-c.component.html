@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="card"  style="justify-items: center;">
+  
+
+        <ng-container *ngIf="!isQuizCompleted">
+            <div class="d-flex justify-content-around py-3">
+                <div class="question-remain">
+                    <span style="font-style: italic;">Question {{currentQuestion+1}} of {{questionList.length}}</span>
+                </div>
+               
+            </div>
+            <div class="progress mb-3" style="margin-left: 20px; margin-right: 20px">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="question" style="margin-left: 35px;">
+                    <h3>{{questionList[currentQuestion]?.questionText}}</h3>
+            </div>
+            <div class="options">
+                <ul *ngFor="let option of questionList[currentQuestion]?.options" style="list-style-type: none; margin-right: 40px;" >
+                    <li (click)="answer(currentQuestion+1,option)">
+                        <div appChangeBg [isCorrect]="option.correct" class="card">
+                            {{option.text}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="isQuizCompleted">
+            <div class="row d-flex justify-content-center" style="margin-left: 20px;">          
+                <h3>Congratulations!! You have completed the quiz.</h3>
+                <p>Total Correct Answered : {{correctAnswer}} </p>
+                <p>Total Wrong Answered : {{inCorrectAnswer}} </p>
+        </div>
+    </ng-container>
+    
+
+    </div>
+</div>

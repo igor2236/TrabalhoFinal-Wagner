@@ -1,0 +1,59 @@
+<nav class="navbar navbar-light bg-light" style="margin-bottom: 10px;">
+  <a class="navbar-brand" routerLink="home">Home</a>
+  <ul class="navbar-nav" dropdown>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="button-basic" dropdownToggle dataa-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" style="cursor:pointer">
+        Igor
+      </a>
+      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" id="dropdown-basic"
+        *dropdownMenu>
+        <a class="dropdown-item" routerLink="perfil">Perfil</a>
+        <a class="dropdown-item" href="#">Sair</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+
+<!--nav ngxNavbarDynamicExpand class="navbar container-fluid navbar-collapse navbar-light bg-light">
+  <div class="container-fluid navbar-expand-lg">
+    <a class="navbar-brand" routerLink="home"> Home </a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" mdbCollapse data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="collapse.toggle()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ngx-navbar-collapse  #collapse="ngxNavbarCollapse"> 
+<ul class="navbar-nav col-lg ">
+
+  <li class="nav-item active">
+    <a routerLink="alunos" class="nav-link" routerLinkActive="active"> Alunos </a>
+  </li>
+
+  <li class="nav-item active">
+    <a routerLink="professores" class="nav-link" routerLinkActive="active"> Professores </a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="disciplinas" class="nav-link" routerLinkActive="active"> Disciplinas </a>
+  </li>
+
+</ul>
+<ul class="navbar-nav" dropdown>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="button-basic" dropdownToggle data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" style="cursor:pointer">
+      Igor
+    </a>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" id="dropdown-basic"
+      *dropdownMenu>
+      <a class="dropdown-item" routerLink="perfil">Perfil</a>
+      <a class="dropdown-item" href="#">Sair</a>
+    </div>
+  </li>
+</ul>
+</ngx-navbar-collapse>
+</div>
+</nav-->
